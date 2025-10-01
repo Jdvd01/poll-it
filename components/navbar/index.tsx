@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 
-import { Button } from "@/components/ui/button";
-
+import { AuthButton } from "./auth-button";
 import { ThemeToggle } from "./theme-toggle";
 
 export function Navbar() {
@@ -54,9 +53,7 @@ export function Navbar() {
 
         <div className="flex items-center gap-4">
           <ThemeToggle />
-          <Button asChild>
-            <Link href="/login">Iniciar sesión</Link>
-          </Button>
+          <AuthButton />
         </div>
       </div>
     </nav>
