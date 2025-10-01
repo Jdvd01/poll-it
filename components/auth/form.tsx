@@ -5,6 +5,8 @@ import Link from "next/link";
 import { redirect, RedirectType } from "next/navigation";
 import React, { useState } from "react";
 
+import { GithubIcon } from "@/common/icons/github";
+import { GoogleIcon } from "@/common/icons/google";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -142,6 +144,7 @@ export function AuthForm({ mode }: AuthFormProps) {
             disabled={isLoading}
             className="w-full bg-transparent"
           >
+            <GoogleIcon />
             Google
           </Button>
           <Button
@@ -150,6 +153,7 @@ export function AuthForm({ mode }: AuthFormProps) {
             disabled={isLoading}
             className="w-full bg-transparent"
           >
+            <GithubIcon />
             Github
           </Button>
         </div>
