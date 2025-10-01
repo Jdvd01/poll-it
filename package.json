@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "format": "prettier --write '**/*.{ts,tsx,js,json,md}'",
     "prepare": "husky",
     "commit": "cz"
   },
@@ -96,8 +97,9 @@
     "typescript": "^5"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix"
+    "*.{ts,tsx,js,json,md}": [
+      "eslint --fix",
+      "prettier --write"
     ]
   },
   "config": {
